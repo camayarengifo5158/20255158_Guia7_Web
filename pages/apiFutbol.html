@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/apiFutbol.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Guía 7 - Ejercicio 2</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../indexDom.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../pages/ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="../pages/ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="../pages/ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="../pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>
+                    <li><a href="../pages/validacion.html" class="nav-link px-2 text-white">Ejercicio 1</a></li>
+                    <li><a href="../pages/apiFutbol.html" class="nav-link px-2 text-warning fw-bold">
+                            <i class="bi bi-check"></i> Ejercicio 2
+                        </a></li>
+                </ul>
+
+                <div class="text-end">
+                    <button type="button" id="idBtnDiv" class="btn btn-outline-light me-2">Nuevo registro</button>
+                    <button type="button" id="idBtnButton" class="btn btn-warning">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold text-center">Explorador de equipos de fútbol</h1>
+        <p class="text-center text-muted mb-4">
+            Ejercicio complementario 2: consumo de <span class="fw-bold">API-Football</span> de RapidAPI con Fetch API y async/await.
+        </p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <form class="row g-3 align-items-end" onsubmit="return false">
+                    <div class="col-lg-5">
+                        <label for="idApiKey" class="form-label fw-bold">
+                            <i class="bi bi-key"></i> API Key de RapidAPI
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="idApiKey" autocomplete="off"
+                                placeholder="Pegue aquí su X-RapidAPI-Key">
+                            <button type="button" class="btn btn-outline-secondary" id="idBtnGuardarKey">
+                                <i class="bi bi-save"></i> Guardar
+                            </button>
+                        </div>
+                        <div class="form-text">La key se guarda solo en su navegador, no forma parte del código.</div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <label for="idCmbLiga" class="form-label fw-bold">Liga</label>
+                        <select class="form-select" id="idCmbLiga">
+                            <option value="39" selected>Premier League</option>
+                            <option value="140">La Liga</option>
+                            <option value="135">Serie A</option>
+                            <option value="78">Bundesliga</option>
+                            <option value="61">Ligue 1</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <label for="idCmbTemporada" class="form-label fw-bold">Temporada</label>
+                        <select class="form-select" id="idCmbTemporada">
+                            <option value="2023" selected>2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 d-grid">
+                        <button type="button" class="btn btn-primary" id="idBtnCargar">
+                            <i class="bi bi-search"></i> Ver equipos
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="idEstado" class="alert alert-info" role="status">
+            Ingrese su API Key, elija una liga y presione "Ver equipos".
+        </div>
+
+        <div id="idEquipos" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 mb-4"></div>
+
+        <div id="idDetalle"></div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/apiFutbol.js" defer></script>
+
+</body>
+
+</html>
