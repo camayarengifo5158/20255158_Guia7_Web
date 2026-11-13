@@ -1,0 +1,39 @@
+.tarjeta-equipo {
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta-equipo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-equipo.seleccionada {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.45);
+}
+
+.escudo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.escudo-grande {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.foto-jugador {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tabla-jugadores {
+    max-height: 480px;
+    overflow-y: auto;
+}

@@ -1,0 +1,62 @@
+body {
+    background-color: #eeeeee;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+}
+
+main h2 {
+    color: #37474f;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #1565c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#encabezado {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+#encabezado h1 {
+    margin: 0;
+}
+
+#pie {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+
+    main {
+        width: auto;
+        margin: 16px;
+        padding: 18px;
+    }
+
+    #encabezado {
+        padding: 22px 16px;
+    }
+}
